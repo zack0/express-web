@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    script(src='javascripts/site.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+body
+    nav.navbar.navbar-default
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          div(class='brand')
+           a(href='#')
+            
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+          form.navbar-form.navbar-left.form-inline(role='login')
+            .form-group
+              label.sr-only(for='exampleInputEmail3') Email address
+              input#exampleInputEmail3.form-control(type='email', placeholder='Email')
+            .form-group
+              label.sr-only(for='exampleInputPassword3') Password
+              input#exampleInputPassword3.form-control(type='password', placeholder='Password')
+            button.btn.btn-default(type='submit') Sign in
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') Home
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Tools 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='/apply') Apply
+                li
+                  a(href='#') Resources
+                li
+                  a(href='#') Calculators
+                li.divider(role='separator')
+                li
+                  a(href='/employees') Loan Officers
+        // /.navbar-collapse
+      // /.container-fluid
+    block content
+div.footer
+  div(class='row')
+    div(class='col-sm-12')
+        p
+          | For a Complete list of States we are licensed please click 
+          a(title='National Licenses', href='http://www.vipmtginc.com/national-licenses')
+            | Here
+            br
+          | National Licensing V.I.P. NATIONAL NMLS 145502 AZ: Mortgage Banker License No. BK-0909074, BKBR-0115633, BKBR-0115710, BKBR-0115261, BKBR-0116075, BKBR-0116262, BKBR-0116743, BKBR-0116742,BKBR-0116740, BKBR-0116741, BKBR-0116422
+        p
+          a(href='http://www.nmlsconsumeraccess.org', target='_blank')
+            img(src='/themes/vipmtginc.com/images/logo_HOME.gif', alt='logo_HOME')
+        p
+          i
+            | V.I.P. Mortgage, Inc. does Business in Accordance With Federal Fair Lending Laws. V.I.P. Mortgage, Inc. is not acting on behalf of or at the direction of HUD/FHA or the Federal Government.  V.I.P. Mortgage, Inc. is approved to participate in FHA programs but the products and services performed by V.I.P. Mortgage, Inc. are not coming directly from HUD or FHA.

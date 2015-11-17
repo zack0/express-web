@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  ul(class="empList")
+    each employee, i in employeelist
+      li(emp)
+        img(src="images/employees/#{employee.Image}")
+        br
+        | #{employee.FirstName} #{employee.LastName}
+        br
+        | National License: #{employee.Licenses.National}
+        br 
+        | #{employee.BusinessStreetAddress}
+        br
+        | #{employee.BusinessCity}, #{employee.BusinessState} #{employee.BusinessPostalCode}

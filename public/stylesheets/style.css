@@ -1,0 +1,64 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+img.jti{
+	width: 100%;
+	opacity: 0.5;
+}
+
+div.brand{
+	width: 150px;
+	height: 50px;
+	background-image: url('/images/logos/logo-small.png');
+	background-repeat: no-repeat;
+}
+
+div.hero-body{
+	width:100%;
+	height:600px;
+	background-image: url('/images/slide1.jpg');
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width : 979px) {
+	div.hero-body{
+		height: 400px;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	div.hero-body{
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width : 600px) {
+	div.hero-body{
+		height: 270px;
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	div.hero-body{
+		height: 200px;
+	}
+}
+
+ul.empList{
+	list-style: none;
+}
+
+li.emp{
+
+}
+
+div.appright{
+	background-image: url('/images/ty_bg.png');
+	background-repeat: no-repeat;
+}

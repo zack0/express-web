@@ -1,0 +1,112 @@
+extends layout
+
+block content
+
+    div(class='row')
+      div(class='col-md-12')
+        h1 Get started with your Digital Loan
+        h2 No hassles, no obligation
+        p Loan Purpose
+        .btn-group(role='group', aria-label='...')
+          button.btn.btn-default(href='#', ,='', onclick="showSection('apply');javascript:hideSection('refi');javascript:hideSection('prequal');return false;", type='button') Purchase
+          button.btn.btn-default(href='#', ,='', onclick="showSection('refi');javascript:hideSection('apply');javascript:hideSection('prequal');return false;", type='button') Refinance
+          button.btn.btn-default(href='#', ,='', onclick="showSection('prequal');javascript:hideSection('refi');javascript:hideSection('apply'); return false;", type='button') Prequalify
+      div(class='row')
+        #apply.col-md-7
+          h1 Purchase
+          form(name='applyforloan', method='post', action='/applyforloan')
+          .form-group
+            label(for='inputContactFirstName') First Name
+            input#inputContactFirstName.form-control(type='text', size='50', max='100', pattern='[A-Za-z].*', name='contactfirstname', placeholder='John', required='required')
+          .form-group
+            label(for='inputContactLastName') Last Name
+            input#inputContactLastName.form-control(type='text', size='50', max='100', pattern='[A-Za-z].*', name='contactlastname', placeholder='Doe', required='required')
+          .form-group
+            label(for='inputContactEmail') Email
+            input#inputContactEmail.form-control(class='form-control', type='email', size='50', placeholder='youremail@yourdomain.com', name='contactemail', required='required')
+          .form-group
+            label(for='inputContactMobilePhone') Mobile Phone
+            input#inputContactMobilePhone.form-control(type='text', size='50', max='15', pattern='[\d{3}-\d{3}-\d{4}]', placeholder='888-888-8888', name='contactmobilephone', required='required')
+          .form-group
+            label(for='inputContactPresentStreetAddress') Present Street Address
+            input#inputContactPresentStreetAddress.form-control(class='form-control', type='text', size='50', pattern='[A-Za-z0-9].*', placeholder='1234 E Main St', name='contactpresentstreetaddress', required='required')
+          .form-group
+            label(for='inputContactPresentCity') Present City
+            input#inputContactPresentcity.form-control(class='form-control', type='text', size='50', placeholder='Phoenix', name='contactpresentcity', required='required')
+          .form-group
+            label(for='inputContactPresentState') Present State
+            input#inputContactPresentState.form-control(class='form-control', type='text', size='40', placeholder='AZ', name='contactpresentstate', required='required')
+          .form-group
+            label(for='inputContactPresentPostalCode') Present Postal Code
+            input#inputContactPresentPostalCode.form-control(class='form-control', type='text', size='40', placeholder='85044', pattern='[0-9]{5}' name='contactpresentpostalcode', required='required')
+          button.btn.btn-default(type='submit') Submit
+        #refi.col-md-7(style='display:none;')
+          h1 Refinance
+          form(name='applyforloan', method='post', action='/applyforloan')
+          .form-group
+            label(for='inputContactFirstName') First Name
+            input#inputContactFirstName.form-control(type='text', size='50', max='100', pattern='[A-Za-z].*', name='contactfirstname', placeholder='John', required='required')
+          .form-group
+            label(for='inputContactLastName') Last Name
+            input#inputContactLastName.form-control(type='text', size='50', max='100', pattern='[A-Za-z].*', name='contactlastname', placeholder='Doe', required='required')
+          .form-group
+            label(for='inputContactEmail') Email
+            input#inputContactEmail.form-control(class='form-control', type='email', size='50', placeholder='youremail@yourdomain.com', name='contactemail', required='required')
+          .form-group
+            label(for='inputContactMobilePhone') Mobile Phone
+            input#inputContactMobilePhone.form-control(type='text', size='50', max='15', pattern='[\d{3}-\d{3}-\d{4}]', placeholder='888-888-8888', name='contactmobilephone', required='required')
+          .form-group
+            label(for='inputContactPresentStreetAddress') Present Street Address
+            input#inputContactPresentStreetAddress.form-control(class='form-control', type='text', size='50', pattern='[A-Za-z0-9].*', placeholder='1234 E Main St', name='contactpresentstreetaddress', required='required')
+          .form-group
+            label(for='inputContactPresentCity') Present City
+            input#inputContactPresentcity.form-control(class='form-control', type='text', size='50', placeholder='Phoenix', name='contactpresentcity', required='required')
+          .form-group
+            label(for='inputContactPresentState') Present State
+            input#inputContactPresentState.form-control(class='form-control', type='text', size='40', placeholder='AZ', name='contactpresentstate', required='required')
+          .form-group
+            label(for='inputContactPresentPostalCode') Present Postal Code
+            input#inputContactPresentPostalCode.form-control(class='form-control', type='text', size='40', placeholder='85044', pattern='[0-9]{5}' name='contactpresentpostalcode', required='required')
+          button.btn.btn-default(type='submit') Submit          
+        #prequal.col-md-7(style='display:none;')
+          h1 Prequalify
+          form(name='applyforloan', method='post', action='/applyforloan')
+          .form-group
+            label(for='inputContactFirstName') First Name
+            input#inputContactFirstName.form-control(type='text', size='50', max='100', pattern='[A-Za-z].*', name='contactfirstname', placeholder='John', required='required')
+          .form-group
+            label(for='inputContactLastName') Last Name
+            input#inputContactLastName.form-control(type='text', size='50', max='100', pattern='[A-Za-z].*', name='contactlastname', placeholder='Doe', required='required')
+          .form-group
+            label(for='inputContactEmail') Email
+            input#inputContactEmail.form-control(class='form-control', type='email', size='50', placeholder='youremail@yourdomain.com', name='contactemail', required='required')
+          .form-group
+            label(for='inputContactMobilePhone') Mobile Phone
+            input#inputContactMobilePhone.form-control(type='text', size='50', max='15', pattern='[\d{3}-\d{3}-\d{4}]', placeholder='888-888-8888', name='contactmobilephone', required='required')
+          .form-group
+            label(for='inputContactPresentStreetAddress') Present Street Address
+            input#inputContactPresentStreetAddress.form-control(class='form-control', type='text', size='50', pattern='[A-Za-z0-9].*', placeholder='1234 E Main St', name='contactpresentstreetaddress', required='required')
+          .form-group
+            label(for='inputContactPresentCity') Present City
+            input#inputContactPresentcity.form-control(class='form-control', type='text', size='50', placeholder='Phoenix', name='contactpresentcity', required='required')
+          .form-group
+            label(for='inputContactPresentState') Present State
+            input#inputContactPresentState.form-control(class='form-control', type='text', size='40', placeholder='AZ', name='contactpresentstate', required='required')
+          .form-group
+            label(for='inputContactPresentPostalCode') Present Postal Code
+            input#inputContactPresentPostalCode.form-control(class='form-control', type='text', size='40', placeholder='85044', pattern='[0-9]{5}' name='contactpresentpostalcode', required='required')
+          button.btn.btn-default(type='submit') Submit
+        div(class='col-md-5')
+          div(class='appright', style={float:'left; height:100%;'})
+            h1 Items that you need
+            ol
+              li Current and previous address (2 years)
+              li Property information (if applicable)
+              li Current and previous employment information - dates and monthly income
+              li Bank account statements
+              li Current monthly housing expeses - rent and mortgage payments
+              li Address and market value information for properties that you own including taxes and insurance
+              li Sources and income amounts for all borrowers
+                ul
+                  li If you are a W2 employee you need pay stubs for the last 30 days
+                  li If you are working with a real estate agent you will need thier name, company and phone number
